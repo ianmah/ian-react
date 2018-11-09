@@ -1,8 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Config
 
-## Available Scripts
+Copy the example config file:
 
-In the project directory, you can run:
+```
+cp src/config.example.js src/config.js
+```
+
+Fill-in the fields with your own settings. You can create an app and generate a
+Client-ID on [console.developers.google.com/apis](https://console.developers.google.com/apis/).
 
 ### `npm start`
 
