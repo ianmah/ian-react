@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "./Posts.css";
 import config from '../config';
 import { load } from '../helpers/spreadsheet';
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 class Posts extends Component {
   render() {

@@ -5,28 +5,6 @@ import SocialMedia from "./components/SocialMedia";
 import Typed from 'react-typed';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      links: [
-        {
-          url: 'https://www.linkedin.com/in/ianmah/',
-          icon: 'linkedin',
-          library: 'brands'
-        },
-        {
-          url: 'https://github.com/ianmah/',
-          icon: 'github',
-          library: 'brands'
-        },
-        {
-          url: 'mailto:ianmmah@gmail.com',
-          icon: 'envelope',
-          library: 'solid'
-        }
-      ]
-    }
-  }
 
   render() {
 
@@ -35,7 +13,7 @@ class App extends Component {
         <div className="Header">
           <div className="left">
             <h1 className="App-title">Ian Mah</h1>
-            <SocialMedia links={this.state.links}/>
+            <SocialMedia />
           </div>
           <div className="right">
                 <Typed
