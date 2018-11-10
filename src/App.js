@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Posts from "./components/Posts";
 import SocialMedia from "./components/SocialMedia";
+import Typed from 'react-typed';
 
 class App extends Component {
   constructor(){
@@ -37,10 +38,21 @@ class App extends Component {
             <SocialMedia links={this.state.links}/>
           </div>
           <div className="right">
-            <h2 className="Sub-title">Aspiring Developer, Marketing Director, Photography Enthusiast</h2>
+                <Typed
+                strings={[
+                    'Aspiring Developer',
+                    'Marketing Director',
+                    'Photography Enthusiast']}
+                    typeSpeed={40}
+                    backSpeed={50}
+                    loop >
+                    <h2 className="Sub-Title"/>
+                </Typed>
           </div>
         </div>
-        <Posts />
+        <div className="container">
+          <Posts />
+        </div>
       </div>
     );
   }

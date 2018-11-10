@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./Posts.css";
 import config from '../config';
 import { load } from '../helpers/spreadsheet';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 class Posts extends Component {
   render() {
@@ -10,16 +11,27 @@ class Posts extends Component {
     return <div>{this.state.error}</div>;
   }
   return (
-    <div>
-    <h1>Work</h1>
-      {posts.map((post, i) => (
-        <div className="project" key={i}>
-          {post.year}
-          <h1>{post.make}</h1>
-          <p>{post.model}</p>
-        </div>
-      ))}
+    <div id="work">
+    <Link
+    activeClass="active"
+    to="work"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration= {270}>
+    <a href="#work" className="link"><h1 className="custom-underline">Work</h1></a></Link>
+      <div className="projects">
+        {posts.map((post, i) => (
+          <div className="project" key={i}>
+            <div className="project-content">
+              <p>{post.date}</p>
+              <a href={post.url} target="_blank" className="link"><h1>{post.title}</h1></a>
+              <p>{post.type}</p>
+            </div>
+          </div>
+        ))}
       </div>
+    </div>
   );
 }
 
@@ -58,6 +70,5 @@ class Posts extends Component {
       error: null
     }
 }
-
 
 export default Posts;

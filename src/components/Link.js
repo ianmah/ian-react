@@ -19,7 +19,7 @@ class Link extends Component {
 
     console.log(this.props);
     return(
-      <a href={this.props.link.url}><FontAwesomeIcon className="Icon" size="lg" icon={icon} /></a>
+      <a href={this.props.link.url} target="_blank"><FontAwesomeIcon className="Icon" size="lg" icon={icon} /></a>
     )
   }
 }

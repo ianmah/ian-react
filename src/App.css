@@ -13,22 +13,36 @@
 
 h2 {
   font-weight: 400;
-  font-size: 66px;
+  font-size: 54px;
   line-height: 72px;
 }
 
 .Header {
   height: 80%;
-  width: 100%;
+  margin: auto;
   display: flex;
 }
 
 .left {
   margin: auto;
-  width: 50%;
+  width: 45%;
 }
 
 .right {
   margin: auto;
-  width: 50%;
+  width: 55%;
+}
+
+.typed-cursor {
+  visibility: hidden;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1080px;
+  margin: auto;
 }

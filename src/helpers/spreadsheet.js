@@ -8,15 +8,17 @@ export function load(callback) {
     window.gapi.client.sheets.spreadsheets.values
       .get({
         spreadsheetId: config.spreadsheetId,
-        range: "Sheet1!A2:T"
+        range: "Projects!A2:T"
       })
       .then(
         response => {
           const data = response.result.values;
           const posts = data.map(post => ({
-            year: post[0],
-            make: post[1],
-            model: post[2]
+            date: post[0],
+            title: post[1],
+            type: post[2],
+            using: post[3],
+            url: post[4]
           })) || [];
           callback({
             posts
